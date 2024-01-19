@@ -1,6 +1,7 @@
 from abc import ABC
 from collections.abc import Callable
 from consts.parser_consts import MORSE_SEPARATOR, MORSE_SPACE
+from utils.string_mapping_utils import map_chars_through_words
 
 class MorseParserBase(ABC):
     def __init__(self, morse_item_handler: Callable):
@@ -8,15 +9,12 @@ class MorseParserBase(ABC):
 
 
     def parse_morse_to_text(self, morse: str) -> str:
-        morse_words = morse.split(MORSE_SPACE)
-        parsed_words = list(map(
-            lambda word: ''.join(
-                list(map(
-                    self._morse_item_handler,
-                    word.split(MORSE_SEPARATOR)
-                ))
-            ),
-            morse_words
-        ))
-        result = ' '.join(parsed_words)
+        result = map_chars_through_words(
+            morse,
+            MORSE_SPACE,
+            MORSE_SEPARATOR,
+            ' ',
+            '',
+            self._morse_item_handler
+        )
         return result
