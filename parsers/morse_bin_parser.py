@@ -1,5 +1,5 @@
-from ..consts.parser_consts import SEPARATOR, SPACE
-from ..utils.collection_utils import reversed_dict
+from consts.parser_consts import SEPARATOR, SPACE
+from utils.collection_utils import reversed_dict
 
 morse_to_bin = {
     '00': SPACE,

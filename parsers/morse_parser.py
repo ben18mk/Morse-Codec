@@ -1,4 +1,4 @@
-from ..utils.collection_utils import reversed_dict
+from utils.collection_utils import reversed_dict
 
 char_to_morse = {
     'A': '.-',
