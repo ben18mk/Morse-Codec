@@ -5,6 +5,9 @@ from parsers.conversion_dictionaries.morse_bin_parser import parse_morse_to_bin
 
 class MorseEncoder(MorseEncoderBase):
     def encode(self, text: str) -> bytes:
+        # =====================================================
+        # CR: SRP-Violation, Coupling... move this to a parser
+
         words = text.split(' ')
         morse_list = list(map(
             lambda word: MORSE_SEPARATOR.join(
@@ -16,6 +19,8 @@ class MorseEncoder(MorseEncoderBase):
             words
         ))
         morse = MORSE_SPACE.join(morse_list)
+        # =====================================================
+        
         morse_bin = '0b' + parse_morse_to_bin(morse)
         result = bytes.fromhex(hex(int(morse_bin, 2))[2:])
         return result
