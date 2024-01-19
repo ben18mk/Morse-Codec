@@ -1,0 +1,2 @@
+SEPARATOR = 's'
+SPACE = 'S'
