@@ -1,8 +1,13 @@
 from consts.parser_consts import MORSE_SPACE
 from decoders.abstract.morse_decoder_base import MorseDecoderBase
+from parsers.abstract.morse_parser_base import MorseParserBase
 from parsers.conversion_dictionaries.morse_bin_parser import parse_bin_to_morse
 
 class LowercaseMorseDecoder(MorseDecoderBase):
+    def __init__(self, morse_parser: MorseParserBase):
+        super().__init__(morse_parser)
+
+
     def decode(self, data: bytes) -> str:
         data_hex = hex(int.from_bytes(data, 'big'))[2:]
         bin_list = list(map(
