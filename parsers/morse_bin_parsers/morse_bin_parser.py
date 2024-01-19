@@ -1,21 +1,4 @@
-# CR: Change this file name
-
-from consts.parser_consts import MORSE_SEPARATOR, MORSE_SPACE
-from utils.collection_utils import reversed_dict
-
-bin_to_morse = {
-    '00': MORSE_SPACE,
-    '01': '.',
-    '10': '-',
-    '11': MORSE_SEPARATOR
-}
-morse_to_bin = reversed_dict(bin_to_morse)
-
-"""
-CR: SRP-Violation, Coupling...
-    parse_morse_to_bin() and parse_bin_to_morse() should
-    be taked out to a class or another module 
-"""
+from parsers.morse_bin_parsers.conversion_dictionaries.morse_bin_dictionaries import morse_to_bin, bin_to_morse
 
 def parse_morse_to_bin(morse: str) -> str:
     bin_list = list(map(lambda item: morse_to_bin[item], list(morse)))
