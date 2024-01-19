@@ -1,4 +1,6 @@
+from consts.parser_consts import MORSE_SPACE
 from decoders.abstract.morse_decoder_base import MorseDecoderBase
+from parsers.morse_bin_parser import parse_bin_to_morse
 
 class LowercaseMorseDecoder(MorseDecoderBase):
     def decode(self, data: bytes) -> str:
@@ -8,4 +10,6 @@ class LowercaseMorseDecoder(MorseDecoderBase):
             list(data_hex)
         ))
         binary = ''.join(bin_list)
+        morse = parse_bin_to_morse(binary).rstrip(MORSE_SPACE)
+        print(morse)
         pass # TODO: Implement
