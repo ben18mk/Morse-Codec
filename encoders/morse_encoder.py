@@ -3,7 +3,7 @@ from encoders.abstract.morse_encoder_base import MorseEncoderBase
 from parsers.morse_parser import char_to_morse
 from parsers.morse_bin_parser import parse_morse_to_bin
 
-class LowerCaseMorseEncoder(MorseEncoderBase):
+class MorseEncoder(MorseEncoderBase):
     def encode(self, text: str) -> bytes:
         words = text.split(' ')
         morse_list = list(map(
