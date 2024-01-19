@@ -1,6 +1,6 @@
 from consts.parser_consts import MORSE_SEPARATOR, MORSE_SPACE
 from encoders.abstract.morse_encoder_base import MorseEncoderBase
-from parsers.conversion_dictionaries.morse_parser_dictionaries import char_to_morse
+from parsers.text_morse_parser.convertor_dictionaries.text_morse_dictionaries import char_to_morse
 from parsers.conversion_dictionaries.morse_bin_parser import parse_morse_to_bin
 from utils.string_mapping_utils import map_chars_through_words
 
