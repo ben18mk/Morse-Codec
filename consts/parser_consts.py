@@ -1,2 +1,2 @@
-SEPARATOR = 's'
-SPACE = 'S'
+MORSE_SEPARATOR = 's'
+MORSE_SPACE = 'S'
