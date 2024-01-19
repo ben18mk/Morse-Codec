@@ -1,5 +1,5 @@
 from abc import ABC, abstractclassmethod
-from parsers.abstract.morse_parser_base import MorseParserBase
+from parsers.text_morse_parsers.abstract.morse_parser_base import MorseParserBase
 
 class MorseDecoderBase(ABC):
     def __init__(self, morse_parser: MorseParserBase):
