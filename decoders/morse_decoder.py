@@ -1,6 +1,6 @@
 from consts.parser_consts import MORSE_SPACE
 from decoders.abstract.morse_decoder_base import MorseDecoderBase
-from parsers.text_morse_parser.abstract.morse_parser_base import MorseParserBase
+from parsers.text_morse_parsers.abstract.morse_parser_base import MorseParserBase
 from parsers.conversion_dictionaries.morse_bin_parser import parse_bin_to_morse
 
 class MorseDecoder(MorseDecoderBase):
