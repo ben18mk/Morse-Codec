@@ -1,8 +1,9 @@
 from abc import ABC
+from collections.abc import Callable
 from consts.parser_consts import MORSE_SEPARATOR, MORSE_SPACE
 
 class MorseParserBase(ABC):
-    def __init__(self, morse_item_handler: function):
+    def __init__(self, morse_item_handler: Callable):
         self._morse_item_handler = morse_item_handler
 
 
