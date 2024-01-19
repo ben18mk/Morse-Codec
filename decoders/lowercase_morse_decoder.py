@@ -16,5 +16,5 @@ class LowercaseMorseDecoder(MorseDecoderBase):
         ))
         binary = ''.join(bin_list)
         morse = parse_bin_to_morse(binary).rstrip(MORSE_SPACE)
-        print(morse)
-        pass # TODO: Implement
+        result = self._morse_parser.parse_morse_to_text(morse)
+        return result
