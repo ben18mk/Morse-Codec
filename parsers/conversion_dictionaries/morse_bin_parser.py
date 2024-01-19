@@ -1,3 +1,5 @@
+# CR: Change this file name
+
 from consts.parser_consts import MORSE_SEPARATOR, MORSE_SPACE
 from utils.collection_utils import reversed_dict
 
