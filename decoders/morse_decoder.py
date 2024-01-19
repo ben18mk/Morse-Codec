@@ -8,7 +8,7 @@ class MorseDecoder(MorseDecoderBase):
         super().__init__(morse_parser)
 
 
-    def __hex_nibble_to_bin(hex_nibble):
+    def __hex_nibble_to_bin(self, hex_nibble: str):
         return bin(int(hex_nibble, 16))[2:].rjust(4, '0')
 
 
