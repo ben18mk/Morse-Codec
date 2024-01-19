@@ -1,7 +1,7 @@
 from consts.parser_consts import MORSE_SEPARATOR, MORSE_SPACE
 from encoders.abstract.morse_encoder_base import MorseEncoderBase
-from parsers.morse_parser import char_to_morse
-from parsers.morse_bin_parser import parse_morse_to_bin
+from parsers.conversion_dictionaries.morse_parser_dictionaries import char_to_morse
+from parsers.conversion_dictionaries.morse_bin_parser import parse_morse_to_bin
 
 class MorseEncoder(MorseEncoderBase):
     def encode(self, text: str) -> bytes:
