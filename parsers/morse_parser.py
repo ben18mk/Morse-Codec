@@ -1,3 +1,5 @@
+from ..utils.collection_utils import reversed_dict
+
 char_to_morse = {
     'A': '.-',
     'B': '-...',
@@ -54,3 +56,4 @@ char_to_morse = {
     '$': '...-..-',
     '@': '.--.-.'
 }
+morse_to_char = reversed_dict(char_to_morse)
