@@ -1,0 +1,2 @@
+MORSE_SEPARATOR = 's'
+MORSE_SPACE = 'S'
