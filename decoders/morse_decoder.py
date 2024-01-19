@@ -10,6 +10,9 @@ class MorseDecoder(MorseDecoderBase):
 
     def decode(self, data: bytes) -> str:
         data_hex = hex(int.from_bytes(data, 'big'))[2:]
+
+        # CR: Instead of lambda use private method
+        # CR: Non indicative parameter name 'x'
         bin_list = list(map(
             lambda x: bin(int(x, 16))[2:].rjust(4, '0'),
             list(data_hex)
