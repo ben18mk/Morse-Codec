@@ -9,6 +9,11 @@ bin_to_morse = {
 }
 morse_to_bin = reversed_dict(bin_to_morse)
 
+"""
+CR: SRP-Violation, Coupling...
+    parse_morse_to_bin() and parse_bin_to_morse() should
+    be taked out to a class or another module 
+"""
 
 def parse_morse_to_bin(morse: str) -> str:
     bin_list = list(map(lambda item: morse_to_bin[item], list(morse)))
