@@ -1,4 +1,4 @@
-# Morse-Codec
+# Morse Codec
 The Morse Codec is a Python library that provides functionality for encoding and decoding text using Morse code. This codec follows a unique approach where the encoding process involves parsing each character to Morse code and the converting the Morse code to bytes. Similarly, during decoding, the library parses bytes input to Morse code and then translates it back to characters.
 
 ## Installation
